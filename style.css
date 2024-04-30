@@ -1,0 +1,108 @@
+/* Genel sayfa stillemesi */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+/* Ana konteynerin stillemesi */
+.container {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+}
+/* Yol resminin stillemesi */
+.yol {
+    flex-grow: 3;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+/* Kenar resimlerinin stillemesi */
+.kenar {
+    flex-grow: 1;
+    margin: 0 10px;
+    text-align: center;
+    position: relative;
+}
+/* Resimlerin genel stillemesi */
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+/* Araba resimlerinin stillemesi */
+.araba {
+    position: absolute;
+    bottom: 10%;
+    width: 40px;
+}
+/* Mavi arabanın stillemesi */
+.mavi-araba {
+    left: 40%;
+}
+/* Pembe arabanın stillemesi */
+.pembe-araba {
+    right: 40%;
+}
+/* Bitiş çizgisinin stillemesi */
+.finish-cizgisi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background-color: black;
+}
+
+body {
+    background-color: #4682B4; 
+}
+/* Kazanan mesajının stillemesi */
+.winner {
+    position: fixed;
+    top: 20%;
+    border: 10px solid #4CAF50; 
+    padding: 10px; 
+    width: fit-content; 
+    margin: 20px auto; 
+    text-align: center; 
+    display: none;
+    font-weight: bold; 
+    font-style: italic; 
+    font-size: 50px;
+    color: purple; 
+    font-family: "Bauhaus 93", sans-serif; 
+    
+}
+/* Yeniden başlatma düğmesinin stillemesi */
+.restart-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; 
+}
+/* restart buton stillemesi*/
+.restart-button:hover {
+    background-color: #45a049; 
+}
+/*alt bilgilendirme yazı stillemesi*/
+.instructions {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: black;
+    font-size: 16px;
+}

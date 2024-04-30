@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarış Oyunu</title>
+    <link rel="stylesheet" href="style.css"> <!-- Stil dosyasını bağlama -->
+</head>
+<body>
+<div class="container">
+        <div class="kenar">
+            <img src="sol.png" alt="Sol Kenar"> <!-- Sol kenar için resim -->
+        </div>
+        <div class="yol">
+            <img src="yol.png" alt="Yol"> <!-- Yol için resim -->
+            <div class="finish-cizgisi"></div> <!-- Bitiş çizgisi -->
+            <img src="maviaraba.png" alt="Mavi Araba" id="mavi-araba" class="araba mavi-araba"> <!-- Mavi araba resmi ve id'si -->
+            <img src="pembearaba.png" alt="Pembe Araba" id="pembe-araba" class="araba pembe-araba"> <!-- Pembe araba resmi ve id'si -->
+        </div>
+        <div class="kenar">
+            <img src="sag.png" alt="Sağ Kenar"> <!-- Sağ kenar için resim -->
+        </div>
+        <div class="instructions">
+            <p> mavi araba için ileri W geri S yan A ve D <br/> <!-- Mavi araba kontrolleri -->
+                pembe araba için yön tuşları <br/> <!-- Pembe araba kontrolleri -->
+                tekrar oynamak için ENTER tuşu <!-- Oyunu tekrar başlatma talimatı -->
+                oyunu durdurmak için SPACE tuşuna basınız <!--Oyunu durdurma talimatı-->
+            </p>
+        </div>
+    </div>
+    <div id="winner" class="winner"></div> <!-- Kazananı gösteren bölüm -->
+    <div id="restart-container" style="display: none;"> <!-- Yeniden başlatma düğmesinin bulunduğu bölüm, başlangıçta gizli -->
+        <button id="restart-button" class="restart-button">Tekrar Dene</button>
+    </div>
+    <script src="script.js"></script> <!-- JavaScript dosyasını bağlama -->
+    <script>
+        document.addEventListener('keypress', function(event) { // Enter tuşuna basıldığında oyunu sıfırla
+            if (event.key === 'Enter') {
+                resetGame();
+            }
+        });
+    </script>
+</body>
+</html>
